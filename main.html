@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <form action="" class='calc-form'>
+
+        <div class = 'form-box location'>
+            <div style='position: relative;' id='location-querry'>
+                <input id = 'location_field' onclick="locationClick(this)" value="" type="text" placeholder="Локация" onfocus="this.placeholder = ''" >
+                <span class='label location-label'>Локация</span>
+
+                <div class='choices'>
+                    <span class = 'location' onclick = 'picker(this)'>Охотный Ряд</span>
+                    <span class = 'location' onclick = 'picker(this)'>Тульская</span>
+                </div>
+            </div>
+        </div>
+
+        <div class = 'form-box staff'>
+            <div style='position: relative;' id='staff-querry'>
+                <input id='staff_field' onclick="staffClick(this)" value="" type="text" placeholder="Кол-во сотрудников" onfocus="this.placeholder = ''" >
+                <span class='label staff-label'>Свой ответ</span>
+
+                <div class='choices'>
+                    <span class = 'location' onclick = 'staffpicker(this)'>1</span>
+                    <span class = 'location' onclick = 'staffpicker(this)'>5</span>
+                    <span class = 'location' onclick = 'staffpicker(this)'>10</span>
+                    <span class = 'location' onclick = 'staffpicker(this)'>15</span>
+                </div>
+
+                <span class='staff-next' onclick ='nextSlide()' >Далее➡</staff>
+            </div>
+        </div>
+
+        <div class='form-box results'>
+
+            <div class = 'general-data'>
+                <br>
+                <span class = 'header location-name'>Локация</span>
+                <span class = 'data location-result-name'></span>
+                <br>
+                <span class = 'header staff-amnt'>Кол-во сотруднков</span>
+                <span class = 'data staff-amount'></span>
+
+                <div class = 'det-data'>
+                    <br>
+                    <br>
+                    <span>Первый год</span>
+                    <span class = 'sub-header'>Стоимость кв.м/мес.</span>
+                    <span class = 'sub-data' id = 'unit_price'></span>
+                    <br>
+                    <span class = 'sub-header'>Стоимость первого года/мес.</span>
+                    <span class = 'sub-data' id = 'total_price'></span>
+                    <br>
+
+                    <span class = 'sub-header'>Исходя из</span>
+                    <span class = 'sub-data'>4кв.м / сотрудник</span>
+                    <br>
+
+                    <span class = 'sub-header'>Итоговая площадь</span>
+                    <span class = 'sub-data' id = 'total_area'></span>
+                    <br>
+
+                    <span class = 'sub-header'>Индексация</span>
+                    <span class = 'sub-data'>1.4%</span>
+                    <br>
+
+
+                </div>
+
+            </div>
+
+            <table id = 'price_table'>
+ 
+
+            </table>
+
+
+        </div>
+
+        
+
+    </form>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
